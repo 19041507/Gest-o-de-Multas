@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de Multas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -26,10 +26,10 @@
         <div class="form-card">
             <div class="form-header">
                 <h2>Registrar Infração</h2>
-                <p>Preencha os dados abaixo para cadastrar uma nova ocorrência.</p>
+                <p>Preencha os dados abaixo para cadastrar.</p>
             </div>
 
-            <form class="traffic-form" action="#" method="POST">
+            <form class="traffic-form" action="#" method="GET">
                 <div class="input-group">
                     <label for="nome">Nome do Condutor</label>
                     <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
@@ -58,8 +58,30 @@
                 </div>
             </form>
         </div>
+
+        <div id="lista-multas-container">
+            <h3 style="color: white; text-align: center; margin-bottom: 10px;">Multas Recentes</h3>
+            
+            <div class="multa-card">
+                <div class="multa-info">
+                    <h3>XYZ-9876</h3>
+                    <p><strong>Condutor:</strong> Maria Oliveira</p>
+                    <p><strong>Data:</strong> 18/11/2023</p>
+                </div>
+                <div class="status-pendente">Pendente</div>
+            </div>
+
+            <div class="multa-card">
+                <div class="multa-info">
+                    <h3>BRA-2E19</h3>
+                    <p><strong>Condutor:</strong> Carlos Santos</p>
+                    <p><strong>Data:</strong> 15/11/2023</p>
+                </div>
+                <div class="status-pago">Pago</div>
+            </div>
+        </div>
+
     </main>
 
-    <script type="module" src="script.js"></script>
 </body>
 </html>
