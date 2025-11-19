@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carinha Sorridente</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Multas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="estrutura">
-    <nav class="menu">
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">SOBRE</a></li>
-        <li><a href="#">CONTATO</a></li>
-      </ul>
-    </nav>
-    <img src="rosto.png" alt="Rosto sorridente" class="emoji">
-  </div>
+
+    <header class="main-header">
+        <div id="app-logo">
+            <h1>Sistema de Multas</h1>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Consultar</a></li>
+                <li><a href="#" class="active">Nova Multa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="form-card">
+            <div class="form-header">
+                <h2>Registrar Infração</h2>
+                <p>Preencha os dados abaixo para cadastrar uma nova ocorrência.</p>
+            </div>
+
+            <form class="traffic-form" action="#" method="POST">
+                <div class="input-group">
+                    <label for="nome">Nome do Condutor</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail de Contato</label>
+                    <input type="email" id="email" name="email" placeholder="joao@exemplo.com">
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label for="placa">Placa do Veículo</label>
+                        <input type="text" id="placa" name="placa" placeholder="ABC-1234" maxlength="8" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="data-infracao">Data da Ocorrência</label>
+                        <input type="date" id="data-infracao" name="data-infracao" required>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="reset" class="btn btn-cancel">Limpar</button>
+                    <button type="submit" class="btn btn-submit">Registrar Multa</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
